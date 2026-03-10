@@ -66,7 +66,7 @@ userSchema.pre("save", async function () {
 });
 
 userSchema.methods.isPasswordCorrected = async function (password) {
-  return await bcrypt.compare(password, this.password); // Here this.password means like instance of User schema like User.password
+  return await bcrypt.compare(password, this.password); // Here this.password means like instance of User schema like user.password
 };
 
 userSchema.methods.generateAccessToken = function () {
